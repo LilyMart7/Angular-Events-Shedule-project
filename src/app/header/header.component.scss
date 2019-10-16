@@ -12,6 +12,23 @@
 }
 
 @font-face {
+  font-family: "dancing_script_otregular";
+  src: url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.eot");
+  src: url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.woff2")
+      format("woff2"),
+    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.woff")
+      format("woff"),
+    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.ttf")
+      format("truetype"),
+    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.svg#dancing_script_otregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "caviar_dreamsregular";
   src: url("..//fonts/CaviarDreams/caviardreams-webfont.eot");
   src: url("..//fonts/CaviarDreams/caviardreams-webfont.eot?#iefix")
@@ -77,18 +94,17 @@
 }
 
 $font-awesome: "fontawesomeRegular";
+$font-dancing: "dancing_script_otregular";
 $font-regular: "caviar_dreamsregular";
 $font-bold: "caviar_dreamsbold";
 $font-boldItalic: "caviar_dreamsbold_italic";
 $font-italic: "caviar_dreamsitalic";
 
-
 .header-text {
   .header-text-a {
     color: #04091e;
-    font-family: $font-bold;
-
-
+    font-family: $font-dancing;
+    font-weight: bold;
   }
   :hover {
     text-decoration: none;
@@ -103,7 +119,7 @@ nav {
 
   .nav-events {
     color: #343a40;
-
+    font-size: 16px;
     font-family: $font-bold;
   }
   :hover {
