@@ -1,10 +1,20 @@
-<div class="card border-dark mb-3" style="max-width: 18rem;">
+<!-- <div class="card border-dark mb-3" style="max-width: 18rem;">
         <div class="card-header">Important</div>
         <div class="card-body text-dark">
           <h5 class="card-title">Skills for event</h5>
           <p class="card-text">HTML5, CSS3, JavaScript, React, Redux</p>
           <button type="button" class="btn btn-outline-dark btn-details">Read more</button>
         </div>
-      </div>
+      </div> -->
 
-  
+<div class="row">
+  <div class="col-xs 10">
+    <app-skills-edit></app-skills-edit>
+    <hr />
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor: pointer" *ngFor="let skills of SkillsArr" >
+        {{ skills.skillName }} {{ skills.level }}
+      </a>
+    </ul>
+  </div>
+</div>

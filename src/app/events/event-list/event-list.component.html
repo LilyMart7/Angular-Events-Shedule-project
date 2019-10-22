@@ -1,4 +1,4 @@
-<div class="event-item">
+<!-- <div class="event-item">
   <div class="row">
     <h2>Front-end Trends</h2>
   </div>
@@ -26,5 +26,16 @@
     <button type="button" class="btn btn-outline-success btn-edit">Edit</button>
     <button type="button" class="btn btn-outline-danger btn-delete">Delete</button>
 </div>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-xs-12">
+<button type="button" class="btn btn-outline-dark btn-add">Add new event</button>
+  </div>
+</div>
+<div class="row"> 
+  <div class="col single-event">
+    <app-event-item *ngFor='let event of events' [singleEvent]='event'></app-event-item>
   </div>
 </div>

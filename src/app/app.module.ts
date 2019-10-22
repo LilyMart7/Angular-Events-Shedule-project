@@ -8,6 +8,8 @@ import { EventsComponent } from './events/events.component';
 import { EventListComponent } from './events/event-list/event-list.component';
 import { EventDetailComponent } from './events/event-detail/event-detail.component';
 import { SkillsComponent } from './skills/skills.component';
+import { EventItemComponent } from './events/event-list/event-item/event-item.component';
+import { SkillsEditComponent } from './skills/skills-edit/skills-edit.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SkillsComponent } from './skills/skills.component';
     EventsComponent,
     EventListComponent,
     EventDetailComponent,
-    SkillsComponent
+    SkillsComponent,
+    EventItemComponent,
+    SkillsEditComponent
   ],
   imports: [
     BrowserModule,

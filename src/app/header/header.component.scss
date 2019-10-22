@@ -112,12 +112,9 @@ $font-italic: "caviar_dreamsitalic";
   }
 }
 
-nav {
-  border: 1px solid black;
-  padding: 5px 10px;
-  border-radius: 2px;
-
-  .nav-events {
+.nav li {
+  
+  .nav-link {
     color: #343a40;
     font-size: 16px;
     font-family: $font-bold;
