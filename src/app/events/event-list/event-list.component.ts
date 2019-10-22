@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import Event from "..//..//models/event";
+import { EventService } from "../event.service";
 
 @Component({
   selector: "app-event-list",
@@ -7,18 +8,16 @@ import Event from "..//..//models/event";
   styleUrls: ["./event-list.component.scss"]
 })
 export class EventListComponent implements OnInit {
-  events: Event[] = [
-    new Event(
-      "Svelte",
-      "Svelte description",
-      "https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/236/full/svelte-logo-vertical.png"),
-    new Event(
-      "Svelte",
-      "Svelte description",
-      "https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/236/full/svelte-logo-vertical.png")
+  @Output() getSelectedEvent = new EventEmitter<Event>();
+  events: Event[];
 
-  ];
-  constructor() {}
+  constructor(private eventService: EventService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.events = this.eventService.getAllEvents();
+  }
+
+  onEventSelected(event: Event) {
+    this.getSelectedEvent.emit(event);
+  }
 }

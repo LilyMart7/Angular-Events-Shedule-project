@@ -10,6 +10,7 @@ import { EventDetailComponent } from './events/event-detail/event-detail.compone
 import { SkillsComponent } from './skills/skills.component';
 import { EventItemComponent } from './events/event-list/event-item/event-item.component';
 import { SkillsEditComponent } from './skills/skills-edit/skills-edit.component';
+import { SkillsService } from './skills/skills.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { SkillsEditComponent } from './skills/skills-edit/skills-edit.component'
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SkillsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Skills from '..//models/skills-model';
+import {SkillsService} from './skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,15 +8,17 @@ import Skills from '..//models/skills-model';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  SkillsArr: Skills[] = [
-  new Skills('HTML5', 'Master'),
-  new Skills('CSS3', 'Basic'),
-  new Skills('JavaScript', 'Begginer'),
 
-]
-  constructor() { }
+  SkillsArr: Skills[];
+
+constructor(private skillsService: SkillsService){ }
+
+  onAddSkill(skill:Skills){
+    this.SkillsArr.push(skill);
+  }
 
   ngOnInit() {
+    this.SkillsArr = this.skillsService.getAllSkills();
   }
 
 }

@@ -1,1 +1,23 @@
-<p>skills-edit works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <div>
+      <div class="row">
+        <div class="col form-group skills-input">
+          <label for="name">Skill</label>
+          <input type="text" id="name" class="form-control" #skillInput />
+        </div>
+        <div class="col form-group">
+          <label for="level">Level</label>
+          <input type="text" id="level" class="form-control" #levelInput />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-outline-primary" type="submit" (click)="onAddSkill()">Add</button>
+          <button class="btn btn-outline-danger" type="button">Delete</button>
+          <button class="btn btn-outline-success" type="button">Clear</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
